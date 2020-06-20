@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.sky {
+  position: relative;
+  width: 100%;
+  background-color: skyblue;
+  height: 35vh;
+}
+
+.sky img:nth-child(1) {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 150px;
+  opacity: 0.5;
+  animation: wind 30s linear infinite;
+}
+.sky img:nth-child(2) {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  width: 150px;
+  animation: wind 20s linear infinite;
+}
+.grass {
+  width: 100%;
+  background-color: green;
+  height: 30vh;
+  position: relative;
+}
+.grass h2 {
+  position: absolute;
+  right: 80px;
+  top: 26px;
+  color: aliceblue;
+}
+.grass h3 {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: aliceblue;
+}
+.road {
+  width: 100%;
+  background-color: rgb(79, 79, 82);
+  height: 35vh;
+  position: relative;
+}
+.road img:nth-child(1) {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100px;
+  animation: drive 5s linear 0.5s infinite;
+}
+.road img:nth-child(2) {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 50px;
+  animation: drive 4s linear 0.5s infinite reverse;
+  transform: rotateY(180deg);
+}
+
+.lines {
+  width: 100%;
+  position: absolute;
+  border: 5px dashed white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+
+/* transition animation */
+@keyframes drive {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 1500px;
+  }
+}
+@keyframes wind {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(850px);
+  }
+}
